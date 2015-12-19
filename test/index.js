@@ -23,7 +23,7 @@ describe('nectar', () => {
     });
     it('should write the archive to a file when a second argument is provided', () => {
         return del(['test/tmp/out.tar'])
-            .then(nectar(['test/sample/*'], 'test/tmp/out.tar'))
+            .then(() => nectar(['test/sample/*'], 'test/tmp/out.tar'))
             .then(() => pify(fs.access)('test/tmp/out.tar'));
     });
 });
