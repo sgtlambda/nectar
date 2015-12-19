@@ -1,7 +1,7 @@
 {
   "name": "nectar",
   "version": "0.0.1",
-  "description": "Pack files by glob",
+  "description": "Create tar archive of files matching glob(s)",
   "license": "MIT",
   "repository": "jmversteeg/nectar",
   "author": {

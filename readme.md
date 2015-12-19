@@ -1,6 +1,6 @@
 # nectar
 
-> Pack files by glob
+> Create tar archive of files matching glob(s)
 
 [![Build Status][travis-image]][travis-url]
 [![Code Quality][codeclimate-image]][codeclimate-url]
