@@ -16,9 +16,6 @@
     "pretest": "eslint lib && eslint test",
     "test": "mocha --recursive -R spec"
   },
-  "files": [
-    "index.js"
-  ],
   "keywords": [
     "tar",
     "archive",
