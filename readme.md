@@ -32,6 +32,10 @@ nectar(['resources/**/*.js'], 'bundle.tar');
 
 ### nectar(input, [output])
 
+Creates a tar archive containing all files matched by the given input glob(s). The directory structure is preserved.
+
+Returns a readable if no output argument is provided, or a promise for writing the tar archive to the given output destination.
+
 #### input
 
 Type: `string|string[]`
