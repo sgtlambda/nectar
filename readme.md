@@ -1,6 +1,6 @@
 # nectar [![Build Status](https://travis-ci.org/jmversteeg/nectar.svg?branch=master)](https://travis-ci.org/jmversteeg/nectar)
 
-> My grand module
+> Pack files by glob
 
 
 ## Install
@@ -15,30 +15,29 @@ $ npm install --save nectar
 ```js
 const nectar = require('nectar');
 
-nectar('unicorns');
-//=> 'unicorns & rainbows'
+nectar(['resources/**/*.js']);
+// returns a readable stream for an archive containing all .js files inside 'resources'
+
+nectar(['resources/**/*.js'], 'bundle.tar');
+// returns a promise for packing all .js files inside 'resources' into 'bundle.tar'
 ```
 
 
 ## API
 
-### nectar(input, [options])
+### nectar(input, [output])
 
 #### input
 
+Type: `string|string[]`
+
+Input glob(s).
+
+#### output
+
 Type: `string`
 
-Lorem ipsum.
-
-#### options
-
-##### foo
-
-Type: `boolean`  
-Default: `false`
-
-Lorem ipsum.
-
+Optional output path.
 
 ## License
 

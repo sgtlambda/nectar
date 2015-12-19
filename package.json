@@ -1,7 +1,7 @@
 {
   "name": "nectar",
   "version": "0.0.0",
-  "description": "My grand module",
+  "description": "Pack files by glob",
   "license": "MIT",
   "repository": "jmversteeg/nectar",
   "author": {
@@ -20,7 +20,10 @@
     "index.js"
   ],
   "keywords": [
-    ""
+    "tar",
+    "archive",
+    "glob",
+    "promise"
   ],
   "dependencies": {
     "globby": "^4.0.0",
