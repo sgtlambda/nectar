@@ -15,7 +15,7 @@ describe('nectar', () => {
         parse.on('entry', e => entries.push(e));
         pack.pipe(parse);
         return new Promise(resolve => {
-            pack.on('end', () => resolve())
+            pack.on('end', () => resolve());
         }).then(() => {
             entries.length.should.equal(1);
             entries[0].path.should.equal('test/sample/foobar.txt');
