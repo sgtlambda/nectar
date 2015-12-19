@@ -13,7 +13,7 @@
     "node": ">=0.12.0"
   },
   "scripts": {
-    "pretest": "jshint lib",
+    "pretest": "eslint lib && eslint test",
     "test": "mocha --recursive -R spec"
   },
   "files": [
@@ -38,8 +38,8 @@
     "chai-as-promised": "^5.1.0",
     "coveralls": "^2.11.6",
     "del": "^2.2.0",
+    "eslint": "^1.10.3",
     "istanbul": "^0.4.1",
-    "jshint": "^2.8.0",
     "mocha": "^2.3.4",
     "sinon": "^1.17.2",
     "sinon-chai": "^2.8.0",
