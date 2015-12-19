@@ -10,7 +10,7 @@
     "url": "github.com/jmversteeg"
   },
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=4"
   },
   "scripts": {
     "pretest": "eslint lib && eslint test",
