@@ -1,0 +1,13 @@
+---
+engines:
+  eslint:
+    enabled: true
+    es6: true
+  fixme:
+    enabled: true
+ratings:
+  paths:
+  - "**.js"
+  - "**.jsx"
+exclude_paths:
+- test/**/*
