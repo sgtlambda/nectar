@@ -9,6 +9,7 @@
     "email": "janmerijnversteeg@gmail.com",
     "url": "github.com/jmversteeg"
   },
+  "main": "lib/index.js",
   "engines": {
     "node": ">=4"
   },
