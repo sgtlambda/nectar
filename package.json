@@ -1,6 +1,6 @@
 {
   "name": "nectar",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Pack files by glob",
   "license": "MIT",
   "repository": "jmversteeg/nectar",
