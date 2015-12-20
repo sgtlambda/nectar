@@ -24,7 +24,7 @@ nectar(['resources/**/*.js']);
 // returns a readable stream for an archive containing all .js files inside 'resources'
 
 nectar(['resources/**/*.js'], 'bundle.tar');
-// returns a promise for packing all .js files inside 'resources' into 'bundle.tar'
+// packs all .js files inside 'resources' into 'bundle.tar' and returns a promise for an array of the paths of the packed entries
 ```
 
 
@@ -34,7 +34,8 @@ nectar(['resources/**/*.js'], 'bundle.tar');
 
 Creates a tar archive containing all files matched by the given input glob(s). The directory structure is preserved.
 
-Returns a readable if no output argument is provided, or a promise for writing the tar archive to the given output destination.
+If the `output` argument is provided, the archive is written to `output` and a promise is returned for an array of the paths of the packed entries.
+If no `output` argument is provided, a readable stream for the archive will be returned.
 
 #### input
 
