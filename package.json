@@ -1,6 +1,6 @@
 {
   "name": "nectar",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Create tar archive of files matching glob(s)",
   "license": "MIT",
   "repository": "jmversteeg/nectar",
