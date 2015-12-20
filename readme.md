@@ -45,9 +45,9 @@ Input glob(s).
 
 #### output
 
-Type: `string`
+Type: `string|WritableStream`
 
-Optional output path.
+Optional output path or a writable stream.
 
 ## License
 
