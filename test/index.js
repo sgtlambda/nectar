@@ -8,6 +8,7 @@ const nectar  = require('./../lib/index');
 const Promise = require('pinkie-promise');
 
 describe('nectar', () => {
+    beforeEach(() => del(['test/tmp/*']));
     it('should pack only the files matched by the provided glob(s)', () => {
         let pack    = nectar(['test/sample/*bar*']);
         let parse   = tar.Parse();
@@ -21,9 +22,13 @@ describe('nectar', () => {
             entries[0].path.should.equal('test/sample/foobar.txt');
         });
     });
-    it('should write the archive to a file when a second argument is provided', () => {
-        return del(['test/tmp/out.tar'])
-            .then(() => nectar(['test/sample/*'], 'test/tmp/out.tar'))
+    it('should accept a destination file as the second argument', () => {
+        return nectar(['test/sample/*'], 'test/tmp/out.tar')
+            .then(() => pify(fs.access)('test/tmp/out.tar'));
+    });
+    it('should accept a write stream as the second argument', () => {
+        let writeStream = fs.createWriteStream('test/tmp/out.tar');
+        return nectar(['test/sample/**/*'], writeStream)
             .then(() => pify(fs.access)('test/tmp/out.tar'));
     });
     it('should return a promise for an array of the paths of packed files', () => {
