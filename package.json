@@ -25,7 +25,7 @@
   ],
   "dependencies": {
     "globby": "^4.0.0",
-    "is-writable-stream": "^1.0.0",
+    "is-stream": "^1.0.1",
     "lodash": "^3.10.1",
     "pify": "^2.3.0",
     "pinkie-promise": "^2.0.0",
