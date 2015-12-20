@@ -8,7 +8,7 @@ const nectar  = require('./../lib/index');
 const Promise = require('pinkie-promise');
 
 describe('nectar', () => {
-    it('packs only the files matched by the provided glob(s)', () => {
+    it('should pack only the files matched by the provided glob(s)', () => {
         let pack    = nectar(['test/sample/*bar*']);
         let parse   = tar.Parse();
         let entries = [];
@@ -25,5 +25,8 @@ describe('nectar', () => {
         return del(['test/tmp/out.tar'])
             .then(() => nectar(['test/sample/*'], 'test/tmp/out.tar'))
             .then(() => pify(fs.access)('test/tmp/out.tar'));
+    });
+    it('should return a promise for an array of the paths of packed files', () => {
+        return nectar(['test/sample/**/*'], 'test/tmp/out.tar').should.eventually.have.length(3);
     });
 });
