@@ -1,5 +1,6 @@
 'use strict';
 
+const zlib    = require('zlib');
 const fs      = require('fs');
 const pify    = require('pify');
 const del     = require('del');
@@ -27,9 +28,10 @@ describe('nectar', () => {
             .then(() => pify(fs.access)('test/tmp/out.tar'));
     });
     it('should accept a write stream as the second argument', () => {
-        let writeStream = fs.createWriteStream('test/tmp/out.tar');
+        let gZip        = zlib.createGzip();
+        let writeStream = gZip.pipe(fs.createWriteStream('test/tmp/out.tar.gz'));
         return nectar(['test/sample/**/*'], writeStream)
-            .then(() => pify(fs.access)('test/tmp/out.tar'));
+            .then(() => pify(fs.access)('test/tmp/out.tar.gz'));
     });
     it('should return a promise for an array of the paths of packed files', () => {
         return nectar(['test/sample/**/*'], 'test/tmp/out.tar').should.eventually.have.length(3);

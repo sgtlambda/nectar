@@ -18,6 +18,8 @@ $ npm install --save nectar
 ## Usage
 
 ```js
+const fs     = require('fs');
+const zlib   = require('zlib');
 const nectar = require('nectar');
 
 nectar(['resources/**/*.js']);
@@ -25,6 +27,11 @@ nectar(['resources/**/*.js']);
 
 nectar(['resources/**/*.js'], 'bundle.tar');
 // packs all .js files inside 'resources' into 'bundle.tar' and returns a promise for an array of the paths of the packed entries
+
+let gZip = zlib.createGzip();
+
+nectar(['resources/**/*.js'], gZip.pipe(fs.createWriteStream('bundle.tar.gz')));
+// compresses all .js files inside 'resources' into 'bundle.tar.gz' and returns a promise for an array of the paths of the packed entries
 ```
 
 
