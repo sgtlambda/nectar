@@ -15,7 +15,7 @@
   },
   "scripts": {
     "pretest": "eslint lib && eslint test",
-    "test": "mocha --recursive -R spec"
+    "test": "mocha -R spec"
   },
   "keywords": [
     "tar",

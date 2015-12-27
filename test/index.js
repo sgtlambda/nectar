@@ -1,5 +1,7 @@
 'use strict';
 
+require('./support/bootstrap');
+
 const zlib    = require('zlib');
 const fs      = require('fs');
 const pify    = require('pify');
@@ -35,5 +37,11 @@ describe('nectar', () => {
     });
     it('should return a promise for an array of the paths of packed files', () => {
         return nectar(['test/sample/**/*'], 'test/tmp/out.tar').should.eventually.have.length(3);
+    });
+    it('should allow a mixed array of globs and directory names', () => {
+        return Promise.all([
+            nectar(['test/sample'], 'test/tmp/out.tar').should.eventually.have.length(3),
+            nectar(['test/sample', '!test/sample/sub'], 'test/tmp/out.tar').should.eventually.have.length(2)
+        ]);
     });
 });
