@@ -43,7 +43,7 @@ nectar(['resources/**/*.js'], gZip.pipe(fs.createWriteStream('bundle.tar.gz')));
 Creates a tar archive containing all files matched by the given input glob(s). The directory structure is preserved.
 
 If the `output` argument is provided, the archive is written to `output` and a promise is returned for an array of the paths of the matches entries.
-If no `output` argument is provided, a readable stream for the archive will be returned.
+If no `output` argument is provided, a promise for a readable stream for the archive will be returned.
 
 #### input
 
