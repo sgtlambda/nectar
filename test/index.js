@@ -2,12 +2,13 @@
 
 require('./support/bootstrap');
 
-const zlib    = require('zlib');
-const fs      = require('fs');
-const pify    = require('pify');
-const del     = require('del');
-const nectar  = require('./../lib/index');
-const Promise = require('pinkie-promise');
+const isStream = require('is-stream');
+const zlib     = require('zlib');
+const fs       = require('fs');
+const pify     = require('pify');
+const del      = require('del');
+const nectar   = require('./../lib/index');
+const Promise  = require('pinkie-promise');
 
 describe('nectar', () => {
     beforeEach(() => del(['test/tmp/*']));
@@ -32,5 +33,8 @@ describe('nectar', () => {
             nectar(['test/sample'], 'test/tmp/out.tar').should.eventually.have.length(3),
             nectar(['test/sample', '!test/sample/sub'], 'test/tmp/out.tar').should.eventually.have.length(2)
         ]);
+    });
+    it('should return a readable stream if no output argument is provided', () => {
+        return nectar(['test/sample/*bar*']).then(stream => isStream.readable(stream).should.be.true);
     });
 });
