@@ -28,6 +28,11 @@ describe('nectar', () => {
     it('should return a promise for an array of the paths of matched files', () => {
         return nectar(['test/sample/**/*'], 'test/tmp/out.tar').should.eventually.have.length(3);
     });
+    it('should allow to pass options for node-glob', () => {
+        return nectar(['test/sample/**/*'], 'test/tmp/out.tar', process.cwd(), {
+            dot: false
+        }).should.eventually.have.length(2);
+    });
     it('should allow a mixed array of globs and directory names', () => {
         return Promise.all([
             nectar(['test/sample'], 'test/tmp/out.tar').should.eventually.have.length(3),
