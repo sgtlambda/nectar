@@ -25,9 +25,15 @@ describe('nectar', () => {
         return nectar(['test/sample/**/*'], writeStream)
             .then(() => pify(fs.access)('test/tmp/out.tar.gz'));
     });
-    it('should return a promise for an array of the paths of matched files', () => {
-        return nectar(['test/sample/**/*'], 'test/tmp/out.tar').should.eventually.have.length(3);
+
+    it('should not include dotfiles when not using the short-style directory syntax', () => {
+        return nectar(['test/sample/**/*'], 'test/tmp/out.tar').should.eventually.have.length(2);
     });
+
+    it('should include dotfiles when using the short-style directory syntax', () => {
+        return nectar(['test/sample'], 'test/tmp/out.tar').should.eventually.have.length(3);
+    });
+
     it('should allow to pass options for node-glob', () => {
         return nectar(['test/sample/**/*'], 'test/tmp/out.tar', process.cwd(), {
             dot: false
