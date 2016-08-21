@@ -25,7 +25,7 @@
   ],
   "dependencies": {
     "arrify": "^1.0.1",
-    "dir-glob": "git+ssh://git@github.com/jmversteeg/dir-glob.git",
+    "dir-glob": "github:jmversteeg/dir-glob",
     "globby": "^5.0.0",
     "is-stream": "^1.1.0",
     "lodash": "^4.13.1",
