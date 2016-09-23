@@ -38,7 +38,7 @@ nectar(['resources/**/*.js'], gZip.pipe(fs.createWriteStream('bundle.tar.gz')));
 
 ## API
 
-### nectar(input, [output])
+### nectar(input, [output], [options])
 
 Creates a tar archive containing all files matched by the given input glob(s). The directory structure is preserved.
 
@@ -57,7 +57,7 @@ Type: `string|WritableStream`
 
 Optional output path or a writable stream.
 
-#### cwd
+#### options.cwd
 
 Type: `string`
 Default: `process.cwd()`
