@@ -57,6 +57,13 @@ Type: `string|WritableStream`
 
 Optional output path or a writable stream.
 
+#### cwd
+
+Type: `string`
+Default: `process.cwd()`
+
+Optional working directory for glob matching
+
 ## License
 
 MIT © [JM Versteeg](http://github.com/jmversteeg)
