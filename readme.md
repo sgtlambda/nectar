@@ -66,7 +66,7 @@ Optional working directory for glob matching
 
 ## License
 
-MIT © [JM Versteeg](http://github.com/sgtlambda)
+MIT © [sgtlambda](http://github.com/sgtlambda)
 
 [![dependency Status][david-image]][david-url]
 [![devDependency Status][david-dev-image]][david-dev-url]
