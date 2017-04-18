@@ -347,14 +347,6 @@ diff@1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/diff/-/diff-1.4.0.tgz#7f28d2eb9ee7b15a97efd89ce63dcfdaa3ccbabf"
 
-dir-glob@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/dir-glob/-/dir-glob-1.1.0.tgz#1ca515e4b8de6314f5c17ff7d66c32e2328f786e"
-  dependencies:
-    arrify "^1.0.1"
-    pify "^2.3.0"
-    pinkie-promise "^2.0.0"
-
 "dir-glob@https://github.com/sgtlambda/dir-glob.git":
   version "1.1.0"
   resolved "https://github.com/sgtlambda/dir-glob.git#c339845f19dc813a59f1a5027c3bfccc4b047686"
