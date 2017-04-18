@@ -26,7 +26,7 @@
   "dependencies": {
     "arrify": "^1.0.1",
     "defa": "^1.0.0",
-    "dir-glob": "https://github.com/sgtlambda/dir-glob.git",
+    "dir-glob": "github:sgtlambda/dir-glob",
     "globby": "^6.0.0",
     "is-stream": "^1.1.0",
     "lodash": "^4.15.0",
