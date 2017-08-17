@@ -31,17 +31,17 @@
     "is-stream": "^1.1.0",
     "lodash": "^4.15.0",
     "make-globs-absolute": "1.0.0",
-    "pify": "^2.3.0",
+    "pify": "^3.0.0",
     "pinkie-promise": "^2.0.1",
-    "tar-fs": "^1.13.2"
+    "tar-fs": "^1.15.3"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "chai-as-promised": "^6.0.0",
-    "coveralls": "^2.11.12",
-    "del": "^2.2.2",
-    "eslint": "^3.4.0",
+    "chai": "^4.1.1",
+    "chai-as-promised": "^7.1.1",
+    "coveralls": "^2.13.1",
+    "del": "^3.0.0",
+    "eslint": "^4.4.1",
     "istanbul": "^0.4.5",
-    "mocha": "^3.0.2"
+    "mocha": "^3.5.0"
   }
 }
