@@ -1,4 +1,4 @@
-# ![nectar](media/logo.png)
+# [![nectar](media/logo.png)](https://github.com/sgtlambda/nectar)
 
 > Create tar archive of files matching glob(s)
 
