@@ -25,14 +25,7 @@ nectar(['resources/**/*.js'], 'bundle.tar');
 // and returns a promise for an array of the paths of the packed entries
 ```
 
-#### Streaming mode
-
-```js
-nectar(['resources/**/*.js']);
-// returns a readable stream for an archive containing all .js files inside 'resources'
-```
-
-#### Create .tar.gz
+#### Create `.tar.gz` (using streaming mode)
 
 ```js
 const fs     = require('fs');
@@ -40,9 +33,9 @@ const zlib   = require('zlib');
 
 const gZip   = zlib.createGzip();
 
-nectar(['resources/**/*.js'], gZip.pipe(fs.createWriteStream('bundle.tar.gz')));
-// compresses all .js files inside 'resources' into 'bundle.tar.gz' 
-// and returns a promise for an array of the paths of the packed entries
+nectar(['resources/**/*.js'])
+    .pipe(gZip)
+    .pipe(fs.createWriteStream('bundle.tar.gz'));
 ```
 
 ## API
