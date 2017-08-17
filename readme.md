@@ -1,4 +1,4 @@
-# nectar
+# ![nectar](media/logo.png)
 
 > Create tar archive of files matching glob(s)
 
