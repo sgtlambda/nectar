@@ -41,7 +41,8 @@ const zlib   = require('zlib');
 const gZip   = zlib.createGzip();
 
 nectar(['resources/**/*.js'], gZip.pipe(fs.createWriteStream('bundle.tar.gz')));
-// compresses all .js files inside 'resources' into 'bundle.tar.gz' and returns a promise for an array of the paths of the packed entries
+// compresses all .js files inside 'resources' into 'bundle.tar.gz' 
+// and returns a promise for an array of the paths of the packed entries
 ```
 
 ## API
