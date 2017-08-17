@@ -21,20 +21,28 @@ $ npm install --save nectar
 const nectar = require('nectar');
 
 nectar(['resources/**/*.js'], 'bundle.tar');
-// packs all .js files inside 'resources' into 'bundle.tar' and returns a promise for an array of the paths of the packed entries
+// packs all .js files inside 'resources' into 'bundle.tar' 
+// and returns a promise for an array of the paths of the packed entries
+```
 
+#### Streaming mode
+
+```js
 nectar(['resources/**/*.js']);
 // returns a readable stream for an archive containing all .js files inside 'resources'
+```
 
+#### Create .tar.gz
+
+```js
 const fs     = require('fs');
 const zlib   = require('zlib');
 
-let gZip = zlib.createGzip();
+const gZip   = zlib.createGzip();
 
 nectar(['resources/**/*.js'], gZip.pipe(fs.createWriteStream('bundle.tar.gz')));
 // compresses all .js files inside 'resources' into 'bundle.tar.gz' and returns a promise for an array of the paths of the packed entries
 ```
-
 
 ## API
 
