@@ -2,6 +2,8 @@
 
 > Create `.tar` archive of files matching glob(s)
 
+Makes a great team with [extrakt](https://github.com/sgtlambda/extrakt).
+
 [![Build Status][travis-image]][travis-url]
 [![Code Quality][codeclimate-image]][codeclimate-url]
 [![Code Coverage][coveralls-image]][coveralls-url]
