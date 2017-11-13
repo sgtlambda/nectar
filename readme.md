@@ -22,9 +22,8 @@ $ npm install --save nectar
 ```js
 const nectar = require('nectar');
 
-nectar(['resources/**/*.js'], 'bundle.tar');
-// packs all .js files inside 'resources' into 'bundle.tar' 
-// and returns a promise for an array of the paths of the packed entries
+await nectar(['resources/**/*.js'], 'bundle.tar');
+// packs all .js files inside 'resources' into 'bundle.tar'
 ```
 
 #### Create `.tar.gz` (using streaming mode)
