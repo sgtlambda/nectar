@@ -27,21 +27,21 @@
     "arrify": "^1.0.1",
     "defa": "^1.0.0",
     "dir-glob": "github:sgtlambda/dir-glob",
-    "globby": "^6.0.0",
+    "globby": "^8.0.1",
     "is-stream": "^1.1.0",
-    "lodash": "^4.15.0",
+    "lodash": "^4.17.11",
     "make-globs-absolute": "1.0.0",
-    "pify": "^3.0.0",
+    "pify": "^4.0.1",
     "pinkie-promise": "^2.0.1",
-    "tar-fs": "^1.15.3"
+    "tar-fs": "^1.16.3"
   },
   "devDependencies": {
-    "chai": "^4.1.1",
+    "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
-    "coveralls": "^3.0.0",
+    "coveralls": "^3.0.2",
     "del": "^3.0.0",
-    "eslint": "^4.10.0",
+    "eslint": "^5.7.0",
     "istanbul": "^0.4.5",
-    "mocha": "^4.0.1"
+    "mocha": "^5.2.0"
   }
 }
