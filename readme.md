@@ -5,8 +5,6 @@
 Makes a great team with [extrakt](https://github.com/sgtlambda/extrakt).
 
 [![Build Status][travis-image]][travis-url]
-[![Code Quality][codeclimate-image]][codeclimate-url]
-[![Code Coverage][coveralls-image]][coveralls-url]
 [![NPM Version][npm-image]][npm-url]
 
 
@@ -77,17 +75,11 @@ MIT © [sgtlambda](http://github.com/sgtlambda)
 [travis-image]: https://img.shields.io/travis/sgtlambda/nectar.svg?style=flat-square
 [travis-url]: https://travis-ci.org/sgtlambda/nectar
 
-[codeclimate-image]: https://img.shields.io/codeclimate/github/sgtlambda/nectar.svg?style=flat-square
-[codeclimate-url]: https://codeclimate.com/github/sgtlambda/nectar
-
 [david-image]: https://img.shields.io/david/sgtlambda/nectar.svg?style=flat-square
 [david-url]: https://david-dm.org/sgtlambda/nectar
 
 [david-dev-image]: https://img.shields.io/david/dev/sgtlambda/nectar.svg?style=flat-square
 [david-dev-url]: https://david-dm.org/sgtlambda/nectar#info=devDependencies
-
-[coveralls-image]: https://img.shields.io/coveralls/sgtlambda/nectar.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/sgtlambda/nectar
 
 [npm-image]: https://img.shields.io/npm/v/nectar.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/nectar
