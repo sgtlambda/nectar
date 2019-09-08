@@ -42,7 +42,7 @@ describe('nectar', () => {
 
     it('should allow negating globs', () => Promise.all([
         nectar(['test/sample'], 'test/tmp/out.tar').should.eventually.have.length(4),
-        nectar(['test/sample', '!test/sample/bar'], 'test/tmp/out.tar').should.eventually.have.length(3),
+        nectar(['test/sample', '!test/sample/deep/bar'], 'test/tmp/out.tar').should.eventually.have.length(3),
     ]));
 
     it('should return a readable stream if no output argument is provided', () => {
